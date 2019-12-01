@@ -11,12 +11,10 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.autoClear = false;
   renderer.setClearColor(0x020000, 0.0);
-  document.getElementById('canvas').appendChild(renderer.domElement);
-
 var scene = new THREE.Scene();
 
 
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+var camera = new THREE.PerspectiveCamera( 95, window.innerWidth/window.innerHeight, 0.1, 1000 );
 camera.position.z = 50;
 camera.enableZoom = false
 camera.zoomSpeed = 0.001
@@ -28,10 +26,10 @@ document.body.appendChild( renderer.domElement );
 
 var controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(328, 39%, 53%)'), 1.0);
+var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(255, 39%, 53%)'), 1.0); //hsl(328, 39%, 53%)
 keyLight.position.set(-100, 0, 100);
 
-var fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+var fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(255, 100%, 100%)'), 1.0); //hsl(240, 100%, 75%)'
 fillLight.position.set(100, 0, 100);
 
 var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
@@ -42,12 +40,12 @@ scene.add(fillLight);
 scene.add(backLight);
 
 var textureLoader = new THREE.TextureLoader();
-var map = textureLoader.load('assets/texturawhite.jpg');
+var map = textureLoader.load('./assets/textura1.jpg');
 var material = new THREE.MeshPhongMaterial({map: map});
 
 
 var loader = new THREE.OBJLoader();
-loader.load( 'assets/roca.obj', function ( object ) {
+loader.load( './assets/roca.obj', function ( object ) {
 
   // For any meshes in the model, add our material.
   object.traverse( function ( node ) {
