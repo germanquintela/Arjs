@@ -14,7 +14,7 @@ function init() {
 var scene = new THREE.Scene();
 
 
-var camera = new THREE.PerspectiveCamera( 95, window.innerWidth/window.innerHeight, 0.1, 1000 );
+var camera = new THREE.PerspectiveCamera( 100, window.innerWidth/window.innerHeight, 0.1, 1000 );
 camera.position.z = 50;
 camera.enableZoom = false
 camera.zoomSpeed = 0.001

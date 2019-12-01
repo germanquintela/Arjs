@@ -54,7 +54,8 @@
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 10vh;
+    bottom: 17vh;
+    max-width: 160px;
 }
 
 .home .l-vector {
@@ -65,11 +66,11 @@
 
 .home .l-bottom {
     transform: rotate(180deg);
-    bottom: 30vh;
-    left: 20vw;
+    bottom: 38vh;
+    left: 25vw;
 }
 
 .home .l-top {
-    top: 20vh;
-    right: 20vw;
+    top: 28vh;
+    right: 26vw;
 }
