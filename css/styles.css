@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../assets/TuskerGrotesk-4700Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: url('../assets/TuskerGrotesk-7600Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +21,7 @@
 
 .hamburger {
     width: 25px;
-    height: 23px;
+    height: 19px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,7 +33,7 @@
 
 .hamburger div {
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #eee;
 }
 
@@ -73,4 +88,79 @@
 .home .l-top {
     top: 28vh;
     right: 26vw;
+}
+
+.app {
+    background-color: #F9DE14;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.app .square {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.app .hamburger div {
+    background-color: black;
+}
+
+
+.app button, label {
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 40px;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+
+    max-width: 160px;
+}
+
+.app .open {
+    font-family: 'Tusker Grotesk', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 270px;
+}
+
+.app .upload {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+
+.box {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    height: 70vh;
+    width: 80vw;
+    position: absolute;
+    right: -10000px;
+    padding: 20px;
+    transition: 1s;
+}
+
+.box .title {
+    font-family: 'Tusker Grotesk', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#loader {
+    width: 40px;
+}
+
+.hide {
+    display: none;
+
 }
