@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <!-- include A-Frame obviously -->
+<script src="js/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<script src="js/jerome.min.js"></script>
+
+
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+
+
+
+            <a-scene embedded arjs="trakingMethod: best;">
+
+          <a-entity 
+          id="entity"
+              position="0 0.5 0"
+              scale="0.02 0.02 0.02"
+              obj-model="obj: url(assets/roca.obj)"
+              material="src: assets/textura.jpg"
+              light="type: ambient; color: #888" >    
+          </a-entity>
+          <a-animation
+                    attribute="rotation"
+                    to="0 360 0"
+                    dur="9000"  
+                    repeat="indefinite"
+                    easing="linear">
+                  </a-animation>
+              <!-- define a camera which will move according to the marker position -->
+              <a-marker-camera preset='hiro'></a-marker-camera>
+            </a-scene>
+
+
+  <script>
+    function change() {
+      document.getElementById('entity').setAttribute("material", 'src: assets/' + localStorage.getItem('textura') + '.jpg');
+      document.getElementById('entity').setAttribute("scale", localStorage.getItem('scale'));
+    }
+  </script>
+</body>
+</html>

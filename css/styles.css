@@ -142,18 +142,33 @@
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
-    height: 70vh;
-    width: 80vw;
+    height: 64vh;
+    width: 73vw;
     position: absolute;
     right: -10000px;
-    padding: 20px;
+    padding: 32px;
     transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .box .title {
     font-family: 'Tusker Grotesk', sans-serif;
     font-weight: bold;
     font-size: 40px;
+}
+.box .error {
+    margin-top: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: noraml;
+
+}
+.box .subtitle {
+    font-family: Tusker Grotesk;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 15px;
 }
 
 #loader {

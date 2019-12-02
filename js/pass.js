@@ -67,17 +67,14 @@ function resultado(result) {
     
     if(aAnimation < aScene || aAnimation > aSceneCierre) {
         document.getElementById('error2').classList.remove('hide')
-        correcto = false
     }
 
     if(aMarker < aScene || aMarker > aSceneCierre) {
         document.getElementById('error3').classList.remove('hide')
-        correcto = false
     }
 
     if(aEntity < aScene || aEntity > aSceneCierre) {
         document.getElementById('error4').classList.remove('hide')
-        correcto = false
     }
 
 
@@ -86,7 +83,6 @@ function resultado(result) {
         document.getElementById('error2').classList.add('hide')
         document.getElementById('error3').classList.add('hide')
         document.getElementById('error4').classList.add('hide')
-        correcto = false
     }
 
 
