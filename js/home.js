@@ -40,7 +40,7 @@ scene.add(fillLight);
 scene.add(backLight);
 
 var textureLoader = new THREE.TextureLoader();
-var map = textureLoader.load('./assets/textura.jpg');
+var map = textureLoader.load('./assets/textura3.jpg');
 var material = new THREE.MeshPhongMaterial({map: map});
 
 
